@@ -2,14 +2,14 @@ import 'package:dartz/dartz.dart';
 
 import '../../../../core/error/failure.dart';
 import '../entities/data_user_reqres.dart';
-import '../repositories/data_user_reqres_repository.dart';
+import '../repositories/reqres_repository.dart';
 
 class GetDataUserReqresById {
-  final DataUserReqresRepository dataUserReqresRepository;
+  final ReqresRepository reqresRepository;
 
-  const GetDataUserReqresById({required this.dataUserReqresRepository});
+  const GetDataUserReqresById({required this.reqresRepository});
 
   Future<Either<Failure, DataUserReqres>> call({required int id}) async {
-    return await dataUserReqresRepository.getDataUserReqresById(id);
+    return await reqresRepository.getDataUserReqresById(id);
   }
 }
