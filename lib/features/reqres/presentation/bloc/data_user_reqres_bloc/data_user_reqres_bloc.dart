@@ -1,10 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:myapps/core/error/failure.dart';
-import 'package:myapps/features/reqres/domain/entities/data_user_reqres.dart';
-import 'package:myapps/features/reqres/domain/usecases/get_data_user_reqres_by_id.dart';
-import 'package:myapps/features/reqres/domain/usecases/get_data_user_reqres_random.dart';
+
+import '../../../../../core/error/failure.dart';
+import '../../../domain/entities/data_user_reqres.dart';
+import '../../../domain/usecases/get_data_user_reqres_by_id.dart';
+import '../../../domain/usecases/get_data_user_reqres_random.dart';
 
 part 'data_user_reqres_event.dart';
 part 'data_user_reqres_state.dart';
