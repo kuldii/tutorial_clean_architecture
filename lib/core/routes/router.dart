@@ -10,7 +10,7 @@ GoRouter get router {
         path: "/data-user-reqres",
         name: "data-user-reqres",
         pageBuilder: (context, state) {
-          return NoTransitionPage(
+          return const NoTransitionPage(
             child: DataUserReqresPage(),
           );
         },

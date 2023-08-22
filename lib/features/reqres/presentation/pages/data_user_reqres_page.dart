@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/injection/dependency_injection.dart';
+import '../bloc/data_user_reqres_bloc/data_user_reqres_bloc.dart';
+import '../widgets/data_user_reqres_view.dart';
 
 class DataUserReqresPage extends StatelessWidget {
-  DataUserReqresPage({super.key});
-
-  final TextEditingController idC = TextEditingController();
+  const DataUserReqresPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,40 +14,9 @@ class DataUserReqresPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Data User Reqres"),
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(20),
-        children: [
-          const SizedBox(height: 50),
-          const Text("No data"),
-          const SizedBox(height: 50),
-          TextField(
-            autocorrect: false,
-            controller: idC,
-            keyboardType: TextInputType.number,
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-            ),
-          ),
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text("Get Data By Id"),
-                ),
-              ),
-              const SizedBox(width: 20),
-              Expanded(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text("Get Data Random"),
-                ),
-              ),
-            ],
-          ),
-        ],
+      body: BlocProvider<DataUserReqresBloc>(
+        create: (context) => serviceLocator<DataUserReqresBloc>(),
+        child: DataUserReqresView(),
       ),
     );
   }

@@ -6,11 +6,21 @@ part 'data_user_reqres_model.g.dart';
 
 @JsonSerializable()
 class DataUserReqresModel extends DataUserReqres {
+  @JsonKey(name: "first_name")
+  @override
+  // ignore: overridden_fields
+  final String firstName;
+
+  @JsonKey(name: "last_name")
+  @override
+  // ignore: overridden_fields
+  final String lastName;
+
   const DataUserReqresModel({
     required int id,
     required String email,
-    required String firstName,
-    required String lastName,
+    required this.firstName,
+    required this.lastName,
     required String avatar,
   }) : super(
           id: id,
