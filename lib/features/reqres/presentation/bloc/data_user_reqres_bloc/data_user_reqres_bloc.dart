@@ -28,6 +28,8 @@ class DataUserReqresBloc extends Bloc<DataUserReqresEvent, DataUserReqresState> 
               emit(DataUserReqresStateError(message: lHasilGetDataUserReqresRandom.message));
             } else if (lHasilGetDataUserReqresRandom is GeneralFailure) {
               emit(DataUserReqresStateError(message: lHasilGetDataUserReqresRandom.message));
+            } else if (lHasilGetDataUserReqresRandom is ConnectionFailure) {
+              emit(DataUserReqresStateError(message: lHasilGetDataUserReqresRandom.message));
             } else {
               emit(const DataUserReqresStateError(message: "Cannot get data user random"));
             }
@@ -47,6 +49,8 @@ class DataUserReqresBloc extends Bloc<DataUserReqresEvent, DataUserReqresState> 
             if (lHasilGetDataUserReqresById is ServerFailure) {
               emit(DataUserReqresStateError(message: lHasilGetDataUserReqresById.message));
             } else if (lHasilGetDataUserReqresById is GeneralFailure) {
+              emit(DataUserReqresStateError(message: lHasilGetDataUserReqresById.message));
+            } else if (lHasilGetDataUserReqresById is ConnectionFailure) {
               emit(DataUserReqresStateError(message: lHasilGetDataUserReqresById.message));
             } else {
               emit(const DataUserReqresStateError(message: "Cannot get data user by id"));

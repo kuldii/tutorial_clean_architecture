@@ -1,4 +1,6 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get_it/get_it.dart';
+import 'package:myapps/core/services/network_service.dart';
 
 import '../../features/reqres/data/datasources/data_user_reqres_remote_data_source.dart';
 import '../../features/reqres/data/repositories/reqres_repository_implementation.dart';
@@ -32,10 +34,21 @@ Future<void> initDependencyInjection() async {
   serviceLocator.registerLazySingleton<ReqresRepository>(
     () => ReqresRepositoryImpl(
       dataUserReqresRemoteDataSource: serviceLocator.call(),
+      networkService: serviceLocator.call(),
     ),
   );
 
   serviceLocator.registerLazySingleton<DataUserReqresRemoteDataSource>(
     () => DataUserReqresRemoteDataSourceImpl(),
+  );
+
+  serviceLocator.registerLazySingleton<NetworkService>(
+    () => NetworkServiceImpl(
+      connectivity: serviceLocator.call(),
+    ),
+  );
+
+  serviceLocator.registerLazySingleton(
+    () => Connectivity(),
   );
 }
