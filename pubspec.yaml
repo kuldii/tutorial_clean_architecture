@@ -1,8 +1,8 @@
-name: myapps
-description: A new Flutter project.
+name: tutorial_clean_architecture
+description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,7 +19,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.1.0 <4.0.0"
+  sdk: '>=3.4.4 <4.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -28,38 +28,41 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  bloc: ^8.1.2
-  build_runner: ^2.4.6
-  connectivity_plus: ^4.0.2
-  cupertino_icons: ^1.0.2
+  bloc: ^8.1.4
+  build_runner: ^2.4.11
+  connectivity_plus: ^6.0.4
+  cupertino_icons: ^1.0.6
   dartz: ^0.10.1
   equatable: ^2.0.5
-  firebase_core: ^2.15.1
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.3
-  get_it: ^7.6.0
-  go_router: ^10.1.0
-  http: ^1.1.0
-  json_annotation: ^4.8.1
-  json_serializable: ^6.7.1
+  flutter_bloc: ^8.1.6
+  get_it: ^7.7.0
+  go_router: ^14.2.3
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  hive_generator: ^2.0.1
+  http: ^1.2.2
+  intl: ^0.19.0
+  mockito: ^5.4.4
+  path_provider: ^2.1.4
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.13.1
-  flutter_lints: ^2.0.0
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
-
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  image_path: "assets/icon/icon.png"
-  remove_alpha_ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter:
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

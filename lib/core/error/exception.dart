@@ -1,14 +1,23 @@
 class GeneralException implements Exception {
   final String message;
+
   const GeneralException({required this.message});
 }
 
 class ServerException implements Exception {
   final String message;
+
   const ServerException({required this.message});
 }
 
-class ConnectionException implements Exception {
+class StatusCodeException implements Exception {
   final String message;
-  const ConnectionException({required this.message});
+
+  const StatusCodeException({required this.message});
+}
+
+class EmptyException implements Exception {
+  final String message;
+
+  const EmptyException({required this.message});
 }

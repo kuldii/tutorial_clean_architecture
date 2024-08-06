@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.kuldiiproject" "\0"
-            VALUE "FileDescription", "myapps" "\0"
+            VALUE "FileDescription", "tutorial_clean_architecture" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "myapps" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.kuldiiproject. All rights reserved." "\0"
-            VALUE "OriginalFilename", "myapps.exe" "\0"
-            VALUE "ProductName", "myapps" "\0"
+            VALUE "InternalName", "tutorial_clean_architecture" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.kuldiiproject. All rights reserved." "\0"
+            VALUE "OriginalFilename", "tutorial_clean_architecture.exe" "\0"
+            VALUE "ProductName", "tutorial_clean_architecture" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

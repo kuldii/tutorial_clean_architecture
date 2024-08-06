@@ -1,6 +1,6 @@
 {
-    "name": "myapps",
-    "short_name": "myapps",
+    "name": "tutorial_clean_architecture",
+    "short_name": "tutorial_clean_architecture",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
