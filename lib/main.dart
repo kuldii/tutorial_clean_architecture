@@ -1,29 +1,28 @@
-// import 'package:bloc/bloc.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:my_ca/features/profile/data/datasources/local_datasource.dart';
-// import 'package:my_ca/features/profile/data/repositories/profile_repository_implementation.dart';
-// import 'package:my_ca/features/profile/domain/usecases/get_all_user.dart';
-// import 'package:my_ca/features/profile/presentation/bloc/profile_bloc.dart';
+import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:tutorial_clean_architecture/features/profile/data/models/profile_model.dart';
 
-// import 'core/routes/my_router.dart';
-// import 'observer.dart';
+import 'core/routes/my_router.dart';
+import 'observer.dart';
 
-// void main() async {
-//   Bloc.observer = MyObserver();
-//   runApp(const MyApp());
-// }
+void main() async {
+  // Initialize hive flutter
+  await Hive.initFlutter();
+  Hive.registerAdapter(ProfileModelAdapter());
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
+  Bloc.observer = MyObserver();
+  runApp(const MyApp());
+}
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return BlocProvider(
-//       create: (context) => ..... pakai dependency injection <----,
-//       child: MaterialApp.router(
-//         routerConfig: MyRouter().router, // pasang go router
-//       ),
-//     );
-//   }
-// }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      routerConfig: MyRouter().router, // pasang go router
+    );
+  }
+}
