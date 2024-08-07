@@ -1,5 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'dart:developer';
+
+import 'package:bloc/bloc.dart';
 
 class MyObserver extends BlocObserver {
   @override
